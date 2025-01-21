@@ -3,12 +3,19 @@
    call that function
 */
 
+// FUNCTIONALITY FOR DISPLAY
+// only allows 5 operations at one time
+// 23 character limit
+const display = document.querySelector('.display');
+
+console.log(display.innerHTML);
+
 // FUNCTIONAILITY FOR ADD BUTTON
 const addBtn = document.querySelector('.add');
 
 addBtn.addEventListener('click', () => {
   //add a + symbol to the display
-  console.log("hello!");
+  display.innerHTML += " +";
 })
 
 function add(x, y) {
@@ -21,6 +28,7 @@ const subtractBtn = document.querySelector('.subtract');
 
 subtractBtn.addEventListener('click', () => {
   // add a - symbol to the display to be parsed
+  display.innerHTML += " -";
 })
 
 function subtract(x, y) {
@@ -33,6 +41,7 @@ const multiplyBtn = document.querySelector('.multiply');
 
 multiplyBtn.addEventListener('click', () => {
   // add a * symbol to the display to be parsed
+  display.innerHTML += " *";
 })
 
 function multiply(x, y) {
@@ -45,6 +54,7 @@ const divideBtn = document.querySelector('.divide');
 
 divideBtn.addEventListener('click', () => {
   // add a / symbol to the display to be parsed
+  display.innerHTML += " /";
 })
 
 function divide(x, y) {
@@ -52,8 +62,6 @@ function divide(x, y) {
   return x/y;
 }
 
-const display = document.querySelector('.display');
 
-console.log(display.innerHTML);
 
 
