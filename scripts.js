@@ -15,7 +15,7 @@ const addBtn = document.querySelector('.add');
 
 addBtn.addEventListener('click', () => {
   //add a + symbol to the display
-  display.innerHTML += " +";
+  display.innerHTML += " + ";
 })
 
 function add(x, y) {
@@ -28,7 +28,7 @@ const subtractBtn = document.querySelector('.subtract');
 
 subtractBtn.addEventListener('click', () => {
   // add a - symbol to the display to be parsed
-  display.innerHTML += " -";
+  display.innerHTML += " - ";
 })
 
 function subtract(x, y) {
@@ -41,7 +41,7 @@ const multiplyBtn = document.querySelector('.multiply');
 
 multiplyBtn.addEventListener('click', () => {
   // add a * symbol to the display to be parsed
-  display.innerHTML += " *";
+  display.innerHTML += " * ";
 })
 
 function multiply(x, y) {
@@ -54,13 +54,22 @@ const divideBtn = document.querySelector('.divide');
 
 divideBtn.addEventListener('click', () => {
   // add a / symbol to the display to be parsed
-  display.innerHTML += " /";
+  display.innerHTML += " / ";
 })
 
 function divide(x, y) {
   console.log(x/y)
   return x/y;
 }
+
+// Making the number buttons add the numbers into the display
+const numberBtn = document.querySelectorAll('.number');
+
+numberBtn.forEach(button => {
+  button.addEventListener('click', event => {
+    display.innerHTML += button.innerHTML;
+  })
+})
 
 
 
